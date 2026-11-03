@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fontes/inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plex Mono";
+  src: url("/fontes/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --background: #eeebe4;
+  --foreground: #1a1915;
+  --card: #ffffff;
+  --card-foreground: #1a1915;
+  --popover: #ffffff;
+  --popover-foreground: #1a1915;
+  --primary: #16150f;
+  --primary-foreground: #faf8f2;
+  --secondary: #e8e3d8;
+  --secondary-foreground: #1a1915;
+  --muted: #f2efe8;
+  --muted-foreground: #6d675c;
+  --accent: #e8e3d8;
+  --accent-foreground: #1a1915;
+  --destructive: #b8433c;
+  --destructive-foreground: #fdf3f1;
+  --border: #e0d9cc;
+  --input: #d8d1c2;
+  --ring: #0f6b57;
+  --radius: 0.875rem;
+  --marca: #0f6b57;
+  --marca-fundo: #e3efe9;
+  --ok: #1c7a4d;
+  --ruim: #b8433c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-marca: var(--marca);
+  --color-marca-fundo: var(--marca-fundo);
+  --color-ok: var(--ok);
+  --color-ruim: var(--ruim);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Plex Mono", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  ::selection {
+    background: rgba(15, 107, 87, 0.18);
+  }
+}
+
+@utility num {
+  font-variant-numeric: tabular-nums;
+}
